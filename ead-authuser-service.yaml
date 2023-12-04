@@ -44,7 +44,7 @@ ead:
 
 authuser:
   refreshscope:
-    name: Lucas Santos
+    name: Lucas Santos UPDATE!!!
 # refresh mostra as atualizações feitas na api e health a saúde do site.
 menagement:
   endpoints:
