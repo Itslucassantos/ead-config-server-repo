@@ -69,3 +69,11 @@ resilience4j:
       retryInstance:
         maxRetryAttempts: 3
         waitDuration: 5s
+
+menagement:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - refresh
+          - health         
