@@ -1,19 +1,13 @@
 server:
   port: 8084
   servlet:
-    context-path: '/ead-notification/'
+    context-path: "/ead-notification/"
 
 spring:
   application:
     name: ead-notification-service
-  config:
-    import: 'optional:configserver:'
-  cloud:
-    config:
-      discovery:
-        serviceId: ead-config-server
   datasource:
-    url: 'jdbc:postgresql://${DATABASE_HOST:localhost}:${DATABASE_PORT:5432}/${DATABASE_NAME:ead_notification}'
+    url: "jdbc:postgresql://${DATABASE_HOST:localhost}:${DATABASE_PORT:5432}/${DATABASE_NAME:ead_notification}"
     username: bemindersuser
     password: beminders
   jpa:
@@ -30,7 +24,6 @@ spring:
       enabled: Always
   rabbitmq:
     addresses: amqps://oqaevxaf:6KU7WK_x0k2Et0CwgwlOOdf95NAR4uPG@woodpecker.rmq.cloudamqp.com/oqaevxaf
-
 
 logging:
   level:
@@ -56,11 +49,3 @@ management:
         include:
           - refresh
           - health
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: 'http://localhost:8761/eureka'
-  instance:
-    hostname: localhost
-
