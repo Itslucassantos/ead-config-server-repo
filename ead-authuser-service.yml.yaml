@@ -1,13 +1,13 @@
 server:
   port: 8087
   servlet:
-    context-path: '/ead-authuser/'
+    context-path: "/ead-authuser/"
 
 spring:
   application:
     name: ead-authuser-service
   datasource:
-    url: 'jdbc:postgresql://${DATABASE_HOST:localhost}:${DATABASE_PORT:5432}/${DATABASE_NAME:ead_authuser}'
+    url: "jdbc:postgresql://${DATABASE_HOST:localhost}:${DATABASE_PORT:5432}/${DATABASE_NAME:ead_authuser}"
     username: ${DATABASE_USER:bemindersuser}
     password: ${DATABASE_PASSWORD:beminders}
   jpa:
@@ -36,7 +36,7 @@ logging:
 ead:
   api:
     url:
-      course: 'http://ead-course-service/ead-course'
+      course: "http://ead-course-service/ead-course"
   broker:
     exchange:
       # Onde sera enviado os eventos
@@ -52,7 +52,7 @@ menagement:
       exposure:
         include:
           - refresh
-          - health    
+          - health
 
 resilience4j:
   circuitbreaker:
@@ -69,11 +69,3 @@ resilience4j:
       retryInstance:
         maxRetryAttempts: 3
         waitDuration: 5s
-
-menagement:
-  endpoints:
-    web:
-      exposure:
-        include:
-          - refresh
-          - health         
